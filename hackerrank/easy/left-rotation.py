@@ -1,3 +1,10 @@
+
+def reverse(arr, start, end):
+    while start < end:
+        arr[start], arr[end] = arr[end], arr[start]
+        start += 1
+        end -= 1
+
 def rotateLeft(d, arr):
     n = len(arr)
     d %= n
@@ -6,10 +13,9 @@ def rotateLeft(d, arr):
     reverse(arr, 0, n - 1)
     print(arr)
 
-rotateLeft(2, [1,2,3,4,5])
+def rotateLeft2(d, arr):
+    n = len(arr)
+    dx = dx % n
+    return arr[dx:] + arr[:dx]
 
-def reverse(arr, start, end):
-    while start < end:
-        arr[start], arr[end] = arr[end], arr[start]
-        start += 1
-        end -= 1
+rotateLeft(2, [1,2,3,4,5])
